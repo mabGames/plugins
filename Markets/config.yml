@@ -1,0 +1,995 @@
+# Default language file
+lang: ru_RU
+
+# Which economy should auction house use?
+# You have the following supported economy plugins installed: "Vault", "PlayerPoints", "Reserve".
+economy provider: Vault
+
+setting:
+
+  # Should Markets give the player all their items from the category
+  # back when they click the delete button?
+  give back items on category delete: true
+
+  # Should markets give the player all their items in all categories
+  # when they decide to delete their market?
+  give back items on market delete: true
+
+  # Should transactions be logged?
+  log transactions: true
+
+  # How many items can a player request per request creation?
+  max amount per request: 256
+
+  # If a player tries to access a the market menu without owning a market
+  # should markets automatically create a market for them?
+  auto create market: true
+  auto save:
+
+    # Should markets automatically save market data?
+    enabled: true
+
+    # How often (in seconds) should markets save data?
+    delay: 900
+
+  # If enabled, markets will limit the total amount of items a player can have in their market based on their permission
+  limit total market items by permission: true
+
+  # If enabled, markets will limit the total amount of requests a player can have active based on their permission
+  limit total requests by permission: true
+
+  # If limit total market items by permission is enabled, this is will be the default max allowed amount of items (individual stacks)
+  default max allowed market items: 5
+
+  # If limit total requests by permission is enabled, this is will be default allowed request amount
+  default max allowed requests: 2
+
+  # For whatever reason, if you want the market owner to buy their own items, enable this.
+  allow owner to buy own items: true
+
+  # For whatever reason, if you want the requester to fulfill their own request, enable this.
+  allow owner to fulfill requests: false
+  ratings:
+
+    # Should players be allowed to change their rating on a market?
+    allow change: true
+
+    # How many seconds must a player wait before they can change their rating?
+    change delay: 86400
+
+    # What is the max length a rating message can be?
+    max message length: 41
+
+  # How often (in seconds) should markets check for things like the upkeep charge?
+  run market check delay: 10
+
+  # Should clickable request messages be sent to everyone upon a new request creation?
+  broadcast request creation: true
+  feature:
+
+    # How much should it cost to feature a market?
+    cost: 20000
+
+    # How long should a market feature last (in seconds)
+    time: 3600
+  creation fee:
+
+    # Should markets charge players a fee to create their market?
+    enabled: true
+
+    # How much should the market creation fee be?
+    amount: 1000
+  upkeep fee:
+
+    # Should markets charge players after x amount of time to keep their market open?
+    use: false
+
+    # How much should the upkeep fee cost?
+    fee: 2500
+
+    # Adds to the total upkeep fee (ex. if they have 20 items, $ 20 * 5 would be added to the base fee)
+    additional item fee: 5
+
+    # How many seconds should pass before upkeep fees are collected?
+    delay: 604800
+  tax:
+
+    # If enabled, when a sale is made, percentage of the sale will be removed / added
+    enabled: false
+
+    # If enabled, markets will charge the buyer tax instead of the seller
+    tax buyer instead of seller: true
+
+    # This is a percentage, ex. 13 -> 13% tax
+    amount: 13
+
+  # If true, the auto save msg will be shown in the console
+  log save message: true
+
+  # If true, market transactions will show you how much money you spent
+  send money withdraw message: true
+
+  # If true, any sales will be told to the owner
+  send money deposit message: true
+
+  # How much should the item qty be increased by (btn 1)
+  increment one: 1
+
+  # How much should the item qty be increased by (btn 2)
+  increment two: 10
+
+  # How much should the item qty be decreased by (btn 1)
+  decrement one: 1
+
+  # How much should the item qty be decreased by (btn 2)
+  decrement two: 10
+  signs:
+
+    header: '[магазин]'
+
+    activated header: '&8[&eМагазин&8]'
+
+    owner name colour: '&d'
+
+database:
+
+  # Should the plugin use a database to store shop data?
+  use database: false
+
+  # What is the connection url/host
+  host: kiranhart.com
+
+  # What is the port to database (default is 3306)
+  port: 3306
+
+  # What is the name of the database?
+  name: test_user
+
+  # What is the name of the user connecting?
+  username: test_database
+
+  # What is the password to the user connecting?
+  password: Password123.
+
+  # Should the database connection use ssl?
+  use ssl: true
+
+guis:
+  global items:
+    back button:
+
+      # Settings for the back button
+      item: ARROW
+
+      name: '&f<< Назад'
+
+      lore:
+      - '&8Вернуться назад'
+    close button:
+
+      # Settings for the close button
+      item: BARRIER
+
+      name: '&cЗакрыть'
+
+      lore:
+      - '&8Нажми для закрытия'
+    next button:
+
+      # Settings for the next button
+      item: ARROW
+
+      name: '&fВперёд >>'
+
+      lore:
+      - '&8Продвинуться вперёд'
+  main:
+
+    title: Магазины
+
+    use border: false
+
+    fill slots: true
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      all markets:
+        item:
+
+          use custom head: true
+
+          custom head link: 1de9a8e5e6303cec956e37321ca0f7f7f9738211b8f570c3e76c929df5da18
+
+          item: NETHER_STAR
+
+        name: '&fМагазины'
+
+        lore:
+        - ''
+        - '&7Просмотр доступных магазинов'
+        - '&7от игроков'
+      your market:
+
+        name: '&fМой магазин'
+
+        lore:
+        - ''
+        - '&7Просмотр и редактирование магазина'
+        - ''
+        - '&4Если у вас его нет, он будет создан'
+        - '&4за &21000 ₽'
+      transactions:
+
+        item: PAPER
+
+        name: '&fИстория'
+
+        lore:
+        - ''
+        - '&7Просмотр истории продаж'
+        - '&7и покупок'
+      requests:
+
+        item: CHEST_MINECART
+
+        name: '&fМои заказы'
+
+        lore:
+        - ''
+        - '&7Просмотр ваших заказов'
+      open requests:
+
+        item: CHEST
+
+        name: '&fЗаказы'
+
+        lore:
+        - ''
+        - '&7Просмотр всех заказов от игроков'
+  inspect:
+
+    title: '&7&LInspecting Container'
+
+    bg item: BLACK_STAINED_GLASS_PANE
+  market edit:
+
+    title: Редактирование магазина
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      edit name:
+
+        item: PAPER
+
+        name: '&fНазвание магазина'
+
+        lore:
+        - ''
+        - '&7Текущее: %market_name%'
+        - ''
+        - '&8Нажми чтобы изменить'
+      open enabled:
+
+        item: LIME_DYE
+
+        name: '&aМагазин работает'
+
+        lore:
+        - '&8Нажми чтобы &cзакрыть &8магазин'
+      open disabled:
+
+        item: RED_DYE
+
+        name: '&cМагазин закрыт'
+
+        lore:
+        - '&8Нажми чтобы &aоткрыть &8магазин'
+      add category:
+
+        item: NETHER_STAR
+
+        name: '&fНовая категория'
+
+        lore:
+        - '&8Нажми чтобы добавить'
+      feature market:
+
+        item: FIREWORK_ROCKET
+
+        name: '&6Продвинуть магазин'
+
+        lore:
+        - '&8Продвинуть свой магазин'
+        - '&8на первое место за &a%feature_cost% ₽'
+
+        lore already featured:
+        - '&8Ваш магазин уже на первых местах'
+      all items:
+
+        item: CHEST
+
+        name: '&fВсе предметы'
+
+        lore:
+        - '&8Просмотр всех предметов на продаже'
+      delete market:
+
+        item: FIRE_CHARGE
+
+        name: '&4Удалить магазин'
+
+        lore:
+        - '&cПКМ - для удаления магазина,'
+        - '&c&lбез возможности &cвосстановления!'
+      add item:
+
+        item: ENDER_EYE
+
+        name: '&6Добавить предмет'
+
+        lore:
+        - '&8Добавление предмета в магазин'
+      category:
+
+        name: '&f%category_display_name%'
+
+        lore:
+        - '&8Нажми для редактирования'
+  category edit:
+
+    title: Ваш магазин > %category_name%
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      edit name:
+
+        item: PAPER
+
+        name: '&fНазвание категории'
+
+        lore:
+        - ''
+        - '&7Текущее:'
+        - '&f%category_display_name%'
+        - ''
+        - '&8Нажми чтобы изменить'
+      edit description:
+
+        item: WRITABLE_BOOK
+
+        name: '&fОписание категории'
+
+        lore:
+        - ''
+        - '&7Текущее:'
+        - '&f%category_description%'
+        - ''
+        - '&8Нажми для изменения'
+      edit icon:
+
+        name: '&fИзображение'
+
+        lore:
+        - '&8Нажми чтобы изменить'
+      add item:
+
+        item: ENDER_EYE
+
+        name: '&6Добавить предмет'
+
+        lore:
+        - '&8Добавить предмет в эту категорию'
+      empty:
+
+        item: HOPPER
+
+        name: '&fОчистить'
+
+        lore:
+        - '&8Убрать все предметы с категории'
+      delete:
+
+        item: FIRE_CHARGE
+
+        name: '&4Удалить категорию'
+
+        lore:
+        - '&cПКМ - для удаления категории,'
+        - '&c&lбез возможности &cвосстановления!'
+      market item:
+
+        name: '&e%item_name%'
+
+        lore:
+        - '&7Цена: &a%market_item_price% ₽'
+        - '&7Поштучно: &e%market_item_price_for_stack%'
+        - ''
+        - '&7ЛКМ - изменить цену'
+        - '&7Q - снять с продажи'
+        - '&7ПКМ - переключить цену за всё'
+
+        lore custom currency:
+        - '&7Price&f: &fx%market_item_price% %market_item_currency%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Left-Click to edit price'
+        - '&7Press Q to remove item from market'
+        - '&7Right-Click to toggle price per stack'
+        - '&7Shift-Right Click to edit currency item.'
+  select material:
+
+    title: '&eSelect a material'
+  confirm:
+
+    title: Подверждение
+    items:
+      confirm:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&lПодтвердить'
+
+        lore:
+        - '&8Нажми для подтверждения'
+      cancel:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&lОтмена'
+
+        lore:
+        - '&8Нажми для отмены'
+  all items:
+
+    title: '%market_name% &r> Все предметы'
+
+    title edit: Мой магазин > Все предметы
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      market item:
+
+        name: '&e%item_name%'
+
+        edit lore:
+        - '&7Цена: &2%market_item_price% ₽'
+        - '&7Поштучно: &e%market_item_price_for_stack%'
+        - ''
+        - '&7ЛКМ - изменить цену'
+        - '&7Q - снять с продажи'
+        - '&7ПКМ - переключить цену за всё'
+
+        edit lore custom currency:
+        - '&7Цена: &2%market_item_currency% x%market_item_price% шт.'
+        - '&7Поштучно: &e%market_item_price_for_stack%'
+        - ''
+        - '&7ЛКМ - изменить цену'
+        - '&7Q - снять с продажи'
+        - '&7ПКМ - переключить цену за всё'
+        - '&7Shift + ПКМ для редактирования валюты'
+
+        lore:
+        - '&7Цена: &a%market_item_price% ₽'
+        - '&7Поштучно: &e%market_item_price_for_stack%'
+        - ''
+        - '&8Нажми для покупки'
+
+        lore custom currency:
+        - '&7Цена: &2%market_item_currency% x%market_item_price% шт.'
+        - '&7Поштучно: &e%market_item_price_for_stack%'
+        - ''
+        - '&e(!) У этого предмета свой курс обмена'
+        - '&eПКМ - для просмотра требований'
+        - '&8Нажми для покупки'
+
+        # This will only be added to the control lore if the item can be inspected (skulker box)
+        lore inspect:
+        - '&eShift + ПКМ для просмотра'
+  market view:
+
+    title: '&e%market_name%'
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      all items:
+
+        item: CHEST
+
+        name: '&fВсе предметы'
+
+        lore:
+        - '&8Просмотр всех предметов'
+      category:
+
+        name: '&6%category_display_name%'
+
+        lore:
+        - '&f%category_description%'
+        - ''
+        - '&8Просмотр предметов в категории'
+      ratings:
+
+        # If enabled, markets will use a custom textured skull (star)
+        use custom skull: true
+
+        custom skull link: 1c8e0cfebc7f9c7e16fbaaae025d1b1d19d5ee633666bcf25fa0b40d5bd21bcd
+
+        item: PAPER
+
+        name: '&fОтзывы'
+
+        # %average_rating_number% can be used instead of %average_rating_stars%
+        lore:
+        - '&7Средняя оценка&f: &e%average_rating_stars%'
+        - ''
+        - '&8ЛКМ - для просмотра всех отзывов'
+        - '&8ПКМ - оставить отзыв'
+  market list:
+
+    title: Магазины игроков
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    market name: '&f%market_name%'
+
+    market lore:
+    - '%market_description%'
+    - ''
+    - '&7Владелец&f: &f%market_owner%'
+
+    market lore featured:
+    - '%market_description%'
+    - ''
+    - '&7Владелец&f: &f%market_owner%'
+    - ''
+    - '&a&lРЕКОМЕНДУЕТСЯ'
+  market category:
+
+    title: '&e%market_name% &r> %category_display_name%'
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - '&7Цена&f: &a%market_item_price% ₽'
+    - '&7Поштучно: &e%market_item_price_for_stack%'
+    - ''
+    - '&8Нажми чтобы купить'
+
+    item lore custom currency:
+    - '&7Цена: &f%market_item_currency% x%market_item_price% шт.'
+    - '&7Поштучно: &e%market_item_price_for_stack%'
+    - ''
+    - '&e(!) У этого предмета свой курс обмена'
+    - '&eПКМ - для просмотра требований'
+    - '&8Нажми для покупки'
+
+    # This will only be added to the control lore if the item can be inspected (skulker box)
+    item lore inspect:
+    - '&eShift + ПКМ - для просмотра'
+  item purchase:
+
+    title: Покупка
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      increment:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a+%increment_amount% шт.'
+
+        lore:
+        - ' '
+
+      # - '&7quantity by &a+%increment_amount%'
+      decrement:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c-%decrement_amount% шт.'
+
+        lore:
+        - ' '
+
+      # - '&7quantity by &c-%decrement_amount%'
+      purchase:
+
+        item: SUNFLOWER
+
+        name: '&fИнформация'
+
+        lore:
+        - '&7Колличество: &f&e%purchase_quantity%'
+        - '&7Цена за штуку: &2%stack_price% ₽'
+        - '&7Поштучно: &e%market_item_price_for_stack%'
+        - '&7Конечная цена: &2%purchase_price% ₽'
+        - ''
+        - '&8Нажми для покупки'
+
+        lore custom currency:
+        - '&7Quantity&f: &e%purchase_quantity%'
+        - '&7Stack Price&f: x%stack_price% %market_item_currency%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - '&7Final Price&f: x%purchase_price% %market_item_currency%'
+        - ''
+        - '&7Click to make purchase.'
+  transactions:
+
+    title: История транкзаций
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    transaction item: PAPER
+
+    transaction name: '&fТранкзация'
+
+    transaction lore:
+    - '&7ID: &8%transaction_id%'
+    - '&7Покупатель: &f%transaction_buyer%'
+    - '&7Магазин: &f%transaction_market%'
+    - '&7Цена: &2%transaction_price% ₽'
+    - '&7Дата: &f%transaction_date%'
+  open request:
+
+    title: Мои заказы
+
+    title all: Все заказы
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      empty:
+
+        item: HOPPER
+
+        name: '&fОтменить заказы'
+
+        lore:
+        - '&8Отменить все активные заказы'
+      collection:
+
+        item: CHEST
+
+        name: '&fВыполненные заказы'
+
+        lore:
+        - '&8Просмотр выполненных заказов'
+      request:
+
+        name: '%request_item_name% &7x%request_amount% &fшт.'
+
+        lore:
+        - '&8Нажми Q для отмены'
+
+        # - ''
+        # - '&7Колличество&f: %request_amount%'
+        # - ''
+        # - '&7Запрашиваемый предмет&f: %request_item%'
+        lore all:
+        - ''
+        - '&7Разместил: &f%request_requesting_player%'
+        - ''
+        - '&8Нажми для просмотра условий'
+
+  # - '&7Item Requested&f: %request_item%'
+  # - '&7Amount Requested&f: %request_amount%'
+  request fulfillment:
+
+    title: Заказ > Требуемые предметы
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    requested item lore:
+    - ''
+    - '&7Разместил: &f%request_requesting_player%'
+    - '&7Кол-во: &f%request_amount%'
+    - '&7Цена: &2%request_price% ₽'
+    - ''
+    - '&8Нажми для выполнения'
+
+    requested item lore custom currency:
+    - ''
+    - '&7Requester&f: &e%request_requesting_player%'
+    - '&7Quantity&f: &e%request_amount%'
+    - '&7Price&f: &a%request_price%'
+    - '&7Currency&f: %market_item_currency%'
+    - ''
+    - '&eRight-Click to view the required currency.'
+    - '&7Click to fulfill this request.'
+  blocked items:
+
+    title: '&eBlocked Items'
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - ''
+    - '&7Click to remove item from blacklist'
+  custom currency view:
+
+    title: '&eRequired Currency'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+  payment collection:
+
+    title: Выполненные заказы
+
+    fill item: BLACK_STAINED_GLASS_PANE
+  category select:
+
+    title: Выбор категории
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    category name: '&6%category_name%'
+
+    category lore:
+    - '&f%category_description%'
+    - '&8Нажми для выбора категории'
+  add item:
+
+    title: Добавление предмета
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      price:
+
+        item: SUNFLOWER
+
+        name: '&e&LЦена'
+
+        lore:
+        - ''
+        - '&7Текущая: &2%market_item_price% ₽'
+        - '&8Нажми для редактирования'
+
+        lore custom currency:
+        - ''
+        - '&7Текущая: %market_item_currency% x%market_item_price% шт.'
+        - '&8Нажми для редактирования'
+      price for stack:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&LЦена за всё'
+
+          lore:
+          - '&8Нажми чтобы изменить на цену &cпоштучно'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&LЦена за штуку'
+
+          lore:
+          - '&8Нажми чтобы изменить на цену за &2всё'
+      selected category:
+
+        item: NETHER_STAR
+
+        name: '&e&LКатегория'
+
+        lore:
+        - '&7Текущая: &f%selected_market_category%'
+        - '&8Нажми чтобы изменить'
+      use custom currency:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&LСвоя валюта активна'
+
+          lore:
+          - '&8Нажми чтобы &cотключить &8свою валюту'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&LСвоя валюта не активна'
+
+          lore:
+          - '&8Нажми чтобы &2включить &8свою валюту'
+      cancel add:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&LОтмена'
+
+        lore:
+        - '&8Отменить продажу товара'
+      confirm add:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&lПодтвердить'
+
+        lore:
+        - '&8Добавить предмет в магазин'
+      currency holder:
+
+        item: BARRIER
+
+        name: '&c&lОтключено'
+
+        lore:
+        - '&7Необходимо &aвключить &7свою валюту и разместить предмет'
+  bank:
+
+    title: '&eYour Bank'
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - '&7Total Stored&f: &e%currency_amount%'
+    - '&7Left-Click to withdraw'
+  ratings list:
+
+    title: Отзывы
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    rating:
+
+      item: PAPER
+
+      name: '&fОтзыв'
+
+      lore:
+      - '&7Оставил: &f%rating_rater%'
+      - '&7Оценка: &f%rating_stars%'
+      - '&7Сообщение:'
+      - '&f%rating_message%'
+  search:
+
+    title: '&eMarket &f- &7Search Results'
+
+    glow border: false
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item lore:
+    - '&7Market&f: &e%market_name%'
+    - '&7Price&f: &a%market_item_price% ₽'
+    - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+    - ''
+    - '&7Click to purchase this item.'
+
+    item lore custom currency:
+    - '&7Market&f: &e%market_name%'
+    - '&7Price&f: &fx%market_item_price% %market_item_currency%'
+    - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+    - ''
+    - '&7Click to purchase this item.'
+    - '&e(!) This is item has a custom currency'
+    - '&eRight-Click to view the required currency.'
+  rating star select:
+
+    title: Оставить отзыв
+
+    fill item: BLACK_STAINED_GLASS_PANE
+    star:
+
+      use custom skull: true
+      textures:
+        selected:
+
+          one: http://textures.minecraft.net/texture/88991697469653c9af8352fdf18d0cc9c67763cfe66175c1556aed33246c7
+
+          two: http://textures.minecraft.net/texture/5496c162d7c9e1bc8cf363f1bfa6f4b2ee5dec6226c228f52eb65d96a4635c
+
+          three: http://textures.minecraft.net/texture/c4226f2eb64abc86b38b61d1497764cba03d178afc33b7b8023cf48b49311
+
+          four: http://textures.minecraft.net/texture/f920ecce1c8cde5dbca5938c5384f714e55bee4cca866b7283b95d69eed3d2c
+
+          five: http://textures.minecraft.net/texture/a2c142af59f29eb35ab29c6a45e33635dcfc2a956dbd4d2e5572b0d38891b354
+        not selected:
+
+          one: http://textures.minecraft.net/texture/ca516fbae16058f251aef9a68d3078549f48f6d5b683f19cf5a1745217d72cc
+
+          two: http://textures.minecraft.net/texture/4698add39cf9e4ea92d42fadefdec3be8a7dafa11fb359de752e9f54aecedc9a
+
+          three: http://textures.minecraft.net/texture/fd9e4cd5e1b9f3c8d6ca5a1bf45d86edd1d51e535dbf855fe9d2f5d4cffcd2
+
+          four: http://textures.minecraft.net/texture/f2a3d53898141c58d5acbcfc87469a87d48c5c1fc82fb4e72f7015a3648058
+
+          five: http://textures.minecraft.net/texture/d1fe36c4104247c87ebfd358ae6ca7809b61affd6245fa984069275d1cba763
+
+      item: NETHER_STAR
+
+      name: '&6%star_number%'
+
+      lore:
+      - '&7Нажми чтобы поставить оценку %star_number%'
+    message:
+
+      item: PAPER
+
+      name: '&6Сообщение'
+
+      lore:
+      - '&f&e%rating_message%'
+      - ''
+      - '&8Нажми для изменения'
+    confirm:
+
+      item: LIME_STAINED_GLASS_PANE
+
+      name: '&aПодтвердить'
+
+      lore:
+      - '&8Отправить отзыв'
+    cancel:
+
+      item: RED_STAINED_GLASS_PANE
+
+      name: '&cОтмена'
+
+      lore:
+      - '&8Отменить отзыв'
