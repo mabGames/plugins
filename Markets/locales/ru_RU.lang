@@ -1,0 +1,195 @@
+removed_category: '&cКатегория &4%market_category_name% &cудалена из вашего магазина!'
+
+command_syntax:
+  payments: payments [collect]
+  view: view <игрок>
+  search: search <keywords>
+  markets: /markets
+  block_item: block item [list]
+  list: list
+  confiscate: confiscate <игрок>
+  remove: remove
+  add_item: add item <категория> <цена> [цена_за_стак?]
+  pay_upkeep: pay upkeep
+  reload: reload
+  set: set <name|desc|open> <значение>
+  request: request <кол-во> <цена>
+  help: help
+  add_category: add category <название> [описание]
+  bank: bank [add] [-a]
+  create: create [название]
+  settings: settings
+  force_save: force save
+  showrequest: show request <игрок> [-l]
+
+command_description:
+  payments: Собрать предметы с своей валютой
+  add_item: Добавить новый предмет в магазин
+  remove: Удалить свой магазин
+  settings: Открыть конфигурацию плагина
+  reload: Перезагрузить языки и настройки
+  bank: Просмотреть свой банк
+  help: Показать справку
+  markets: Открыть меню
+  pay_upkeep: Оплатить пошлину
+  view: Открыть магазин определённого игрока
+  create: Создать магазин, если его нет
+  showrequest: Просмотреть запросы определённого игрока
+  force_save: Принудительно сохранить все джанные
+  request: Открыть новый запрос на предмет
+  add_category: Создать новую категорию в вашем магазине.
+  confiscate: Забрать все вещи из магазина
+  block_item: Добавить предмет в черный список или просмотреть все заблокированные предметы
+  set: Обновить настройки магазина
+  search: Найти предмет среди всех магазинов
+  list: Просмотреть доступные магазины игроков.
+
+updated_market_description: '&aОписание магазина успешно обновлено'
+
+nothing_in_hand: '&cУ вас нет ничего в руке!'
+
+no_payments_to_collect: '&cОтсутствуют оплаты за ваши товары!'
+
+cannot_buy_from_own_market: '&cВы не можете купить из своего же магазина!'
+
+select_market_category: '&cПожалуйста выберите категорию'
+
+market_category_required: '&cВам нужна как минимум 1 категория!'
+
+removed_player_market: '&cМагазин игрока &4%player%&c успешно удалён!'
+
+money_add: '&a&l+ $%price%'
+
+updated_market_to_close: '&aВаш магазин закрыт'
+
+not_enough_money_custom_currency: '&cУ вас не хватает %currency_item% &cдля покупки.'
+
+prompt:
+  enter_market_name: '&aУкажите название магазина:'
+  enter_category_description: '&aУкажите описание категории:'
+  enter_market_item_price: '&aУкажите цену:'
+  enter_rating_message: '&aПожалуйста, укажите текст отзыва:'
+  enter_category_name: '&aУкажите название категории:'
+  enter_category_display_name: '&aУкажите отображаемое название категории:'
+  enter_withdraw_amount: '&aУкажите колличество которое хотите вывести:'
+
+general:
+  prefix: '&8[&eМагазины&8]'
+  reloaded: '&aПлагин Markets перезагружен (%value%мс)'
+
+must_wait_to_change_rating: '&cВам нужно подождать &4%remaining_days%d %remaining_hours%h %remaining_minutes%m %remaining_seconds%s &cпрежде чем вы сможете изменить рейтинг'
+
+misc:
+  no_rating_message: '&cНет сообщений'
+  no_ratings: '&cНет отзывов'
+  default category description: ' '
+  price is for stack:
+    'true': Нет
+    'false': Да
+  default market description: '&7Приветствую в моём магазине!'
+  category not selected: '&cНичего не выбрано'
+
+added_item_to_category: '&aДобавлен &2%item_name% &aв категорию&f: &2%market_category_name%'
+
+featured_market: '&aВы успешно продвинули магазин'
+
+item_is_blocked: '&cВы не можете запросить/продать этот предмет'
+
+cannot_fulfill_own: '&cВы не можете выполнить свой запрос'
+
+added_blocked_item: '&2%item_name%&a добавлен в чёрный список'
+
+updated_market_to_open: '&aВаш магазин открыт'
+
+air:
+  currency: '&cВы не можете использовать воздух как валюту!'
+
+already_left_rating: '&cВы уже оставляли отзыв об этом магазине.'
+
+upkeep_fee_not_paid: '&cВы не оплатили пошлину магазина, ваш магазин будет закрыт.'
+
+updated_category_description: '&aОписание категории успешно обновлено.'
+
+created_category: '&aВы создали категорию с названием&f: &2%market_category_name%'
+
+click_currency_item_request: '&aНажмите левую/правую кнопку мышки для выбора предмета который будет использоваться как валюта'
+
+search_phrase_empty: '&cУкажите поисковое слово.'
+
+money_remove: '&c&l- $%price%'
+
+created_market: '&aТеперь у вас есть магазин!'
+
+updated_market_item_currency: '&aЦена предмета успешно обновлена.'
+
+at_max_request_limit: '&cВы не можете делать больше запросов'
+
+updated_market_name: '&aНазвание магазина успешно обновлено'
+
+place_sell_item: '&cПоместите предмет который хотите продать - в интерфейс.'
+
+confiscated_market: '&cВещи успешно изъяты.'
+
+already_have_market: '&cВы не можете создать магазин, так как он у вас уже есть!'
+
+player_does_not_have_requests: '&cУ этого игрока нет открытых запросов'
+
+click_currency_item: '&aНажмите левую/правую кнопку мышки для выбора предмета который будет использоваться как валюта'
+
+not_a_number: '&cУкажите правильную цифру'
+
+price_is_zero_or_less: '&cУкажите цену больше 0'
+
+place_currency_item: '&cПоместите предмет который хотите продать - в интерфейс.'
+
+cannot_rate_own_market: '&cВы не можете оценить свой магазин...'
+
+category_already_created: '&cУ вас уже есть категория с названием&f: &4%market_category_name%'
+
+claim_currency: '&cПожалуйста соберите сначала просроченные платежи.'
+
+market_category_not_found: '&cНе удаётся найти категорию с названием&f: &4%market_category_name%'
+
+upkeep_already_paid: '&cПошлина за ваш магазин уже оплачена.'
+
+not_enough_items: '&cУ вас недостаточно товаров для выполнения запроса.'
+
+created_request_broadcast: '&2%player% &aзапрашивает x&2%request_amount% %request_item_name% &8[&eПосмотреть&8]'
+
+money_remove_custom_currency: '&c&l- x%price% %currency_item%'
+
+currency_select_option: '&eНажми сюда для выбора валюты'
+
+market_required: '&cВам нужно создать магазин для этого!'
+
+not_enough_money: '&cУ вас не хватает денег!'
+
+player_does_not_have_funds: '&cУ &f%player% &cне хватает денег для оплаты!'
+
+added_currency_to_bank: '&aВы добавили &2%amount% %currency_item% &aв свой банк'
+
+rating_message_too_long: '&cВаш отзыв очень длинный'
+
+max_request_amount: '&cВы можете запросить &4%request_max_amount% &cпредметов за один запрос.'
+
+updated_category_icon: '&aИзображение категории успешно обновлено.'
+
+market_not_found: '&cНе удалось найти магазин принадлежащий этому игроку.'
+
+at_max_items_limit: '&cВы не можете добавить больше предметов в свой магазин'
+
+not_enough_money_create: '&cУ вас недостаточно денег для создания магазина!'
+
+upkeep_fee_paid: '&aВы оплатили пошлину в размере &2$%upkeep_fee%'
+
+money_add_custom_currency: '&a&l+ x%price% %currency_item%'
+
+player_not_found: '&cНе удаётся найти игрока'
+
+created_request: '&aСоздан новый запрос на x&2%request_amount% %request_item_name%'
+
+updated_category_name: '&aНазвание категории успешно обновлено.'
+
+removed_market: '&cВаш магазин удалён!'
+
+market_closed: '&cМагазин игрока сейчас закрыт'

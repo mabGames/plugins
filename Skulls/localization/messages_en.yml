@@ -1,0 +1,41 @@
+Loading: '&cГоловы загружаются, подожди'
+No Money: '&cУ тебя не хватает денег'
+Withdraw: '&c&l- ${value}'
+Search: '&aУкажи слово для поиска:'
+Player Not Found: '&cНе удалось найти игрока'
+Invalid Number: '&cУкажи правильную цифру'
+Nothing In Hand: '&cТы не держишь голову в руке'
+Not A Skull: '&cТы не держишь голову в руке'
+Enter Category Id: '&aУкажи название категории:'
+Category Id Taken: '&cТакое название уже существует.'
+Category Created: '&aСоздана новая категория - &2{category_id}'
+Enter Skull Price: '&aУкажи цену за голову'
+Reload: '&aПлагин Skulls перезагружен'
+
+Skull Info:
+- '&8{chat_line}'
+- ''
+- '&7ID&f: &f{skull_id}'
+- '&7Текстура&f: &f{skull_texture}'
+- ''
+- '&8{chat_line}'
+
+Commands:
+  Label_Description: '&c&lОписание:'
+  Label_Usage: '&c&lИспользование:'
+  Label_Help_For: Help for /{label}
+  Label_Subcommand_Description: ' &f/{label} {sublabel} {usage+}{dash+}{description}'
+
+  Download: Загрузка и обновление голов
+  Favourites: Открытие меню избранного
+  Give: Выдача головы игроку
+  Info: Отображение информации о голове
+  Latest: Отображение списка новых голов
+  Reload: Обновление настроек и переводов
+  Search: Поиск голов
+
+
+# -------------------------------------------------------------------------------------------------
+# Do not change this value, otherwise it will corrupt your plugin installation!
+# -------------------------------------------------------------------------------------------------
+Version: 1
