@@ -28,42 +28,42 @@
 
 general:
   prefix:
-    normal: '&8[&2Lands&8] '
-    help: '&8[&2Lands&8] &7Usage: '
-  wYes: '&aYes'
-  wNo: '&cNo'
+    normal: '&8[&2Земли&8] '
+    help: '&8[&2Земли&8] &7Использовать: '
+  wYes: '&aДа'
+  wNo: '&cНет'
   none: '&8None'
-  disabled: '&cDisabled'
-  wilderness: '&aWilderness'
-  unlimited: '&aunlimited'
+  disabled: '&cОтключить'
+  wilderness: '&aПустошь'
+  unlimited: '&aНеограниченный'
   server: Server
   affiliation:
-    land: '&8[&2{land}&8]'
-    nation: '&8[&9{nation} &8|&2 {land}&8]'
+    land: '&8[&2{земля}&8]'
+    nation: '&8[&9{нация} &8|&2 {земля}&8]'
   land:
     title:
-      land: '&7%level% &7of&3 %owner%&7.'
-      camp: '&7Camp of&3 %owner%&7.'
-      admin: '&7This land belongs to the server.'
+      land: '&7%level% &7от&3 %owner%&7.'
+      camp: '&7Регион &3 %owner%&7.'
+      admin: '&7Этот регион принадлежит серверу.'
     default-area: Default
   area:
     description:
-      default: '&7New claims will belong to this area.'
-      sub: '&7This is a subarea, which can have special flags and members.'
-      rented: '&7This area is rented by player {player}.'
-      sold: '&7This area is sold to player {player}.'
+      default: '&7Новые регионы будут принадлежать к этому региону.'
+      sub: '&7Это подрегион, который может иметь специальные флаги и участники.'
+      rented: '&7Этот регион принадлежит игроку {player}.'
+      sold: '&7Этот регион продан игроку {player}.'
   time:
     days: day(s)
     hours: hour(s)
     minutes: minute(s)
     seconds: second(s)
   status:
-    online: '&aonline'
-    offline: '&coffline'
+    online: '&aв сети'
+    offline: '&cне в сети'
   top:
     hologram:
-      title: '&7&m━━━━━━━━━━━━━━<━&r &2Top 10 Lands &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
-      footer: '&7&m━━━━━━━━━━━━━━<━&r &2Top 10 Lands &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
+      title: '&7&m━━━━━━━━━━━━━━<━&r &2Топ 10 Земель &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
+      footer: '&7&m━━━━━━━━━━━━━━<━&r &2Топ 10 Земель &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
   integration:
     dynmap:
       land:
@@ -80,52 +80,52 @@ general:
         '1': '&c#&l{place}'
         '2': '&8<&2 {land} &8>'
         '3': '&7by {owner}'
-        '4': '&7Balance:&3 {value}'
+        '4': '&7Баланс:&3 {value}'
       chunks:
         '1': '&c#&l{place}'
         '2': '&8<&2 {land} &8>'
         '3': '&7by {owner}'
-        '4': '&7Chunks:&3 {value}'
+        '4': '&7Чанки:&3 {value}'
       members:
         '1': '&c#&l{place}'
         '2': '&8<&2 {land} &8>'
         '3': '&7by {owner}'
-        '4': '&7Members:&3 {value}'
+        '4': '&7Участники:&3 {value}'
       level:
         '1': '&c#&l{place}'
         '2': '&8<&2 {land} &8>'
-        '3': '&7Level:&3 {value}'
-        '4': '&7Progress: {progress}%'
+        '3': '&7Уровень:&3 {value}'
+        '4': '&7Прогресс: {progress}%'
     noLand:
       line-1: ' '
-      line-2: '&cNo land'
-      line-3: '&cto show.'
+      line-2: '&cНет земли'
+      line-3: '&cпоказать.'
       line-4: ' '
     rent:
-      line-2: '&6Rent {area}'
+      line-2: '&6Сдать {area}'
       line-3: '&c{cost} &8/ &5{time}'
-      line-4: '&8Max: {max}'
+      line-4: '&8Максимум: {max}'
     sell:
       area:
-        line-2: '&aBuy'
-        line-3: '&7Area&6 {area}'
+        line-2: '&aКупить'
+        line-3: '&7Область&6 {area}'
         line-4: '&c{cost}'
       land:
-        line-2: '&aBuy'
-        line-3: '&7Land&2 {land}'
+        line-2: '&aКупить'
+        line-3: '&7Земля&2 {land}'
         line-4: '&c{cost}'
     rented:
-      line-2: '&7Area&6 {area}'
+      line-2: '&7Область&6 {area}'
       line-3: '&7{player}'
-      line-4: '&5{time} &7left'
+      line-4: '&5{time} &7левый'
     sold:
       area:
-        line-2: '&7Area&6 {area}'
-        line-3: '&aSold &7to'
+        line-2: '&7Область&6 {area}'
+        line-3: '&aПродано &7к'
         line-4: '&7{player}'
       land:
-        line-2: '&7Land&2 {land}'
-        line-3: '&aSold &7to'
+        line-2: '&7Земля&2 {land}'
+        line-3: '&aПродано &7к'
         line-4: '&7{player}'
   map:
     wilderness: '&2▉ '
@@ -134,11 +134,11 @@ general:
     others: '&c▉ '
     position: '&9▉ '
     info:
-      wilderness: ' &2▉ &7= Wilderness'
-      yours: ' &a▉ &7= Yours'
-      trusted: ' &e▉ &7= Trusted'
-      others: ' &c▉ &7= Others'
-      position: ' &9▉ &7= Position'
+      wilderness: ' &2▉ &7= Пустошь'
+      yours: ' &a▉ &7= Твои'
+      trusted: ' &e▉ &7= Доверенный'
+      others: ' &c▉ &7= Другие'
+      position: ' &9▉ &7= Позиция'
     hover:
       wilderness: '&7This chunk is wilderness. Click to claim it.'
       yours: '&7This land is owned by you. Click to show information about land&3
